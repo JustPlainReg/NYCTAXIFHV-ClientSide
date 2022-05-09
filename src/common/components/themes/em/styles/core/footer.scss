@@ -1,0 +1,93 @@
+.em-cc-la-footer {
+  padding-top: 20px;
+  padding-bottom: 4px;
+  position: fixed;
+  bottom: 0px;
+  left: 310px;
+  background-color: $body-background;
+  width: 1020px;
+  box-shadow: 0px -10px 10px 2px rgba(255,255,255,0.7);
+
+  @include breakpoint(phone) {
+    left: 86px;
+    width: calc(100% - 86px);
+  }
+  @include breakpoint(phablet) {
+    left: 86px;
+    width: 670px;
+  }
+  @include breakpoint(tablet) {
+    left: 106px;
+    width: 890px;
+  }
+  @include breakpoint(laptop) {
+    left: 300px;
+    width: 840px;
+  }
+  @include breakpoint(desktop) {
+    left:310px;
+    width: 1020px;
+  }
+
+  .dot-container {
+    display: none; //hiding dots for now
+    margin: 1rem;
+  }
+
+  .page-dot {
+    background-color: $secondary-color;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 6px 0.5rem;
+  }
+
+  .current-dot {
+    background-color: $primary-color;
+    transform: scale(1.3);
+  }
+
+  >div{
+    padding-right: .9375rem;
+    padding-left: .9375rem;
+  }
+
+  .button, .button.hollow {
+    min-width: 90px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+
+    &:hover, &:focus {
+      background-color: $primary-color;
+      color: $white;
+    }
+
+    @include breakpoint(phone) {
+      min-width: 80px;
+    }
+    @include breakpoint(phablet) {
+      min-width: 90px;
+    }
+    @include breakpoint(tablet) {
+      min-width: 90px;
+    }
+    @include breakpoint(laptop) {
+      min-width: 90px;
+    }
+    @include breakpoint(desktop) {
+      min-width: 90px;
+    }
+  }
+
+  .button.next {
+    position: relative;
+    margin-left: 1rem;
+  }
+
+  .button.prev {
+    position: relative;
+
+  }
+}

@@ -1,0 +1,65 @@
+/*** Generic modal styles ***/
+.ReactModalPortal {
+  
+  .dialog {
+    padding: 1.5rem;
+    padding-bottom: 0;
+    width: 500px;
+  }
+  
+  .message {
+    margin: 1.5rem 0;
+    font-size: 0.9rem;
+  }
+
+  .cc-la-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgb(204, 204, 204);
+    background: rgb(255, 255, 255);
+    overflow: auto;
+    border-radius: 4px;
+    outline: none;
+    padding: 0;
+    max-width: 50%;
+
+    i.close {
+      margin: 20px 20px 0 0;
+    }
+
+    .close-icon{
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin: 10px;
+      background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTA5LjE4NCA1MDkuMTg0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MDkuMTg0IDUwOS4xODQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxnPg0KCQk8cGF0aCBzdHlsZT0iZmlsbDojMDEwMDAyOyIgZD0iTTUwNC41OTMsMzg5Ljg0NGMyLjg1NCwyLjg1Niw0LjI4NCw2LjIyMiw0LjI4NCwxMC4wOThjMCwzLjg3Ny0xLjQzMSw3LjI0Mi00LjI4NCwxMC4xMDENCgkJCWwtOTQuODYsOTQuODU3Yy0yLjg1NCwyLjg1Ni02LjEyLDQuMjg0LTkuNzkyLDQuMjg0Yy0zLjI2NCwwLTYuNzI5LTEuNDI4LTEwLjQwMy00LjI4NEwyNTQuMjg0LDM2OS42NDdMMTE5LjAzMyw1MDQuODk5DQoJCQljLTIuODU2LDIuODU2LTYuMTIsNC4yODQtOS43OTIsNC4yODRjLTMuMjY0LDAtNi43MzItMS40MjgtMTAuNDA0LTQuMjg0bC05NC44Ni05NC44NTdjLTIuNDQ4LTIuNDQ4LTMuNjcyLTUuOTE2LTMuNjcyLTEwLjQwNA0KCQkJYzAtNC4wOCwxLjIyNC03LjM0NCwzLjY3Mi05Ljc5MmwxMzUuMjUyLTEzNS4yNTRMNC41ODksMTE5LjM0Yy0yLjg1Ni0yLjQ0OC00LjI4NC01LjcxMi00LjI4NC05Ljc5Mg0KCQkJYzAtNC40ODgsMS40MjgtNy45NTYsNC4yODQtMTAuNDA0bDk0LjI0OC05NC44NkMxMDEuNjkzLDEuNDI4LDEwNS4xNjEsMCwxMDkuMjQxLDBzNy4zNDQsMS40MjgsOS43OTIsNC4yODRsMTM1LjI1MSwxMzUuMjUyDQoJCQlMMzg5LjUzNyw0LjI4NEMzOTIuMzkyLDEuNDI4LDM5NS43NjEsMCwzOTkuNjM3LDBzNy4yNDIsMS40MjgsMTAuMDk4LDQuMjg0bDk0Ljg2LDk0Ljg2YzIuODU0LDIuODU2LDQuMjg0LDYuMjIyLDQuMjg0LDEwLjA5OA0KCQkJcy0xLjQzMSw3LjI0Mi00LjI4NCwxMC4wOThMMzY5LjM0MSwyNTQuNTkyTDUwNC41OTMsMzg5Ljg0NEw1MDQuNTkzLDM4OS44NDR6Ii8+DQoJPC9nPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=)
+    }
+
+    .title {
+      padding: 15px 25px;
+      background-color: #f7f7f9;
+      margin-bottom: 0;
+      border-bottom: 0.01rem solid #e0e3e8;
+      font-size: 1.3rem;
+    }
+
+    div.content {
+      padding: 25px 40px 20px 25px;
+    }
+
+    div.action-bar {
+      border-top: 0.01rem solid #e0e3e8;
+      padding-right: 20px;      
+    }
+
+    // Responsive breakpoints
+    @include breakpoint(phone) {
+      max-width: 85%;
+    }
+  }
+}

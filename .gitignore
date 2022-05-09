@@ -1,0 +1,15 @@
+.DS_Store
+*.log
+node_modules
+dist
+tests
+coverage
+.idea/
+.yarn-cache
+.vscode/
+definitions/log/info/*.json
+definitions/log/error/*.error
+customization.json
+interviewCustomization.json
+/.vs
+*.code-workspace

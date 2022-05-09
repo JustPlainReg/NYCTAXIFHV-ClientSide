@@ -1,0 +1,101 @@
+.em-cc-bp-home {
+  .button {
+    text-transform: uppercase;
+  }
+  .main-content {
+    margin-top: 30px;
+  }
+  .em-cc-bp-loan-card {
+
+    margin-bottom: 24px;
+    padding: 0 20px 0 0;
+    width: 20rem;
+    float: left;
+
+    @media (max-width: 736px) {
+      width: 18rem;
+    }
+    .status {
+      background: #1779ba;
+      font-size: 14px;
+      color: white;
+      padding: 2px;
+      text-transform: uppercase;
+      text-align: center;
+      border-radius: 2px;
+      position: absolute;
+      top: 3px;
+      right: -1px;
+      border-top-right-radius: 5px;
+      width: 7rem;
+    }
+    .title {
+      margin-top: 0.5rem;
+      text-transform: capitalize;
+    }
+    .status.active {
+      background: #0d7b34;
+    }
+    .status.draft {
+      background: #b34f02;
+    }
+    .status.inprocess {
+      background: #6d6d6d;
+    }
+    .status.inactive {
+      background: #6d6d6d;
+    }
+    .status.error {
+      background: $plum;
+    }
+    .body {
+      display: flex;
+      overflow: hidden;
+      clear: both;
+      vertical-align: bottom;
+      margin-bottom: 20px;
+      .left {
+        width: 80%;
+      }
+      .right {
+        width: 20%;
+      }
+      .left-tile {
+        text-align: left;
+        width: 50%;
+      }
+      .right-tile {
+        text-align: left;
+        width: 50%;
+      }
+      .parent-tile {
+        display: flex;
+        overflow: hidden;
+        clear: both;
+        vertical-align: bottom;
+        margin-top: 15px;
+      }
+      .items {
+        padding: 0.2em 0;
+        &-label {
+          display: block;
+          font-size: 14px;
+          color: #6d6d6d;
+        }
+        &-value {
+          word-wrap: break-word;
+          display: block;
+          font-size: 14px;
+          max-height: 120px;
+          overflow: hidden;
+        }
+      }
+    }
+    .footer {
+      position: absolute;
+      bottom: 0;
+      right: 25px;
+      left: 25px;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.em-cc-bp {
+  .em-cc-bp-consent {
+    .content {
+      border-bottom: 1px solid #e2e2e2;
+      border-top: 1px solid #e2e2e2;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      padding: 20px;
+    }
+    .title {
+      width: 100%;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  
+    .consent-actions {
+      padding: 20px 0;
+      width: 100%;
+      text-align: center;
+      button {
+        float: right;
+        margin-right: 20px;
+        width: 150px;
+        @include breakpoint(phone) {
+          width: 100%;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

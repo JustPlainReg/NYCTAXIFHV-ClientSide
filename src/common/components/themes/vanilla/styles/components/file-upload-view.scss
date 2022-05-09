@@ -1,0 +1,236 @@
+.em-cc-bp-upload {
+  ul {
+    margin-left: 0;
+    li {
+      list-style-type: none;
+    }
+  }
+
+  .list-container {
+    max-height: 300px;
+    max-width: 500px;
+    overflow-y: auto;
+
+    @include breakpoint(phone) {
+      max-height: 300px;
+    }
+  }
+  
+  .list {
+    padding-right: 40px;
+    width:         100%;
+  }
+
+  .list-item {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+    &.valid-file-item + &.invalid-file-item {
+      margin-top: 30px;
+    }
+  }
+  
+  .file-container {
+    border:   solid 1px map-get($emccla-palette, success);
+    color:    $dark-gray;
+    padding:  16px 32px;
+    position: relative;
+    width:    100%;
+
+    &.is-invalid {
+      background: rgba(map-get($emccla-palette, alert), 0.11);
+      border:     solid 1px map-get($emccla-palette, alert);
+
+      .progress {
+        background: inherit
+      }
+    }
+
+  }
+  
+  .icon-clip{
+    left: 9px;
+    position: absolute;
+    background: url("../images/clip.svg") no-repeat;
+  }
+
+  .error {
+    color:         map-get($emccla-palette, alert);
+    display:       block;
+    margin-top: 10px;
+  }
+  
+  .progress {
+    background: rgba(map-get($emccla-palette, success), 0.11);
+    height:     100%;
+    left:       0;
+    position:   absolute;
+    top:        0;
+    transition: width 1s;
+    width:      0%;
+  }
+  
+  .file-name {
+    @include ellipsis(auto);
+    display: block;
+    font-weight: bold;
+    line-height: 20px;
+    max-width: 60%;
+  }
+
+  .file-size {
+    @include ellipsis(auto);
+    display: block;
+    font-weight: bold;
+    line-height: 20px;
+    margin-left: 4px;
+    max-width: 35%;
+  }
+  
+  .remove-file {
+    cursor: pointer;
+    position: absolute;
+    right: -38px;
+    top: 13px;
+    background: url("../images/upload_close.svg") no-repeat;
+    height: 20px;
+    width: 20px;
+    &:hover,
+    &:focus {
+      outline: none;
+      text-decoration: none;
+    }
+  }
+  
+  .select-file-button {
+    width: 100%
+  }
+
+  .uploaded-file {
+    position: absolute;
+    right: -38px;
+    top: 13px;
+    height: 20px;
+    width: 20px;      
+    background: url("../images/check.svg") no-repeat;
+  }
+
+  .form-actions {
+    padding-top: 24px;
+    padding-right: 41px;
+    text-align: center;
+
+    @include breakpoint(phone) {
+      background: $white;
+      border-top: 1px solid $light-gray;
+      bottom:     0;
+      max-height: 150px;
+      width:      100%;
+    }
+
+    .action-left {
+      @include breakpoint(phone) {
+        float:   none;
+      }
+      @include breakpoint(phablet) {
+        float:   none;
+      }
+      @include breakpoint(laptop) {
+        width: 50%;
+        float: left;
+        padding-right: 10px;
+        button {
+          margin-bottom: 0;
+        }  
+
+      }
+    }
+
+    .action-right {
+      @include breakpoint(phone) {
+        float:   none;
+      }
+      @include breakpoint(phablet) {
+        float:   none;
+      }
+      @include breakpoint(laptop) {
+        width: 50%;
+        float: right;
+        padding-left: 10px;
+        button {
+          margin-bottom: 0;
+        }        
+      }
+    }
+  }
+
+  .upload-rules {
+    color:      #8946a7;
+    font-size:  14px;
+    font-style: italic;
+    margin-bottom: 20px;
+    line-height: 25px;
+  }
+
+  .drag-and-drop-area {
+    @include breakpoint(phone) {
+      display: none;
+      margin-bottom: 100px
+    }
+    @include breakpoint(phablet) {
+      display: none;
+      margin-bottom: 100px;
+    }          
+    @include breakpoint(laptop) {
+      display: block;
+      margin-bottom: 0;
+    }    
+  }
+
+  .drag-and-drop-placeholder {
+    @include breakpoint(phone) {
+      display: block;
+      height: 20px;
+    }
+    @include breakpoint(phablet) {
+      display: block;
+      height: 20px;
+    }    
+    @include breakpoint(laptop) {
+      display: none;
+    }    
+  }
+
+  .drop-area {
+    background: rgba(19,153,234,.05);
+    border-radius: 5px;
+    border: 2px dotted #139aea;
+    color: #0e6ba9;
+    display: table;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 28px 0;
+    text-transform: uppercase;
+    height: 120px;
+    width: 100%;
+    text-align: center;
+
+    .text {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+      
+  .drop-area-divider {
+    height: 30px;
+    text-align: center;
+  
+    &-text {
+      vertical-align: middle;
+      color: #6d6d6d;
+      position: relative;
+    }
+  }
+}
+
+

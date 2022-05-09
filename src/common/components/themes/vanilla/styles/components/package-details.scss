@@ -1,0 +1,57 @@
+.em-cc-bp-package {
+  .em-cc-bp-package-card {
+    .em-cc--card {
+      height: 380px;
+    }
+
+    margin-bottom: 24px;
+    padding: 0 20px 0 0;
+    width: 20rem;
+    float: left;
+    .task {
+      text-align: center;
+      margin-top: 15px;
+    }
+    .review-docs-note {
+      font-size: 13px;
+      text-align: left;
+      color: #b34f02;
+      margin: 10px 0 20px 0;
+      line-height: 16px;
+    }
+    
+    .footer {
+      position: absolute;
+      bottom: 0;
+      right: 12px;
+      left: 12px;
+      .button {
+        margin-bottom: 0.5rem;
+      }
+    }
+    .upload {
+      margin-bottom: 16px;
+    }
+    .column:last-child:not(:first-child) {
+      float: none;
+    }
+    .completed-icon {
+      display: inline-block;
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      background: url("../images/check.svg") no-repeat;
+      padding: 0;
+      position: absolute;
+      left: 163px;
+    }
+    .hgroup {
+      div,
+      strong {
+        text-align: center;
+        display: block;
+      }
+    }
+  }
+}

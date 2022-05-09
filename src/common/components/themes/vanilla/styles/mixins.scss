@@ -1,0 +1,63 @@
+$error-border-color: map-get($error, border-color);
+$error-bg-color: map-get($error, bg-color);
+
+@mixin breakpoint($point) {
+   @if $point == desktop {
+     @media (min-width: 70em) { @content ; }
+  }
+   @else if $point == laptop {
+     @media (min-width: 64em) { @content ; }
+  }
+    @else if $point == tablet {
+     @media (min-width: 50em) { @content ; }
+  }
+   @else if $point == phablet {
+     @media (min-width: 37.5em)  { @content ; }
+  }
+  @else if $point == phone {
+     @media (max-width: 37.5em)  { @content ; }
+  }
+  @else if $point == handheld {
+    @media (min-width: 37.5em) and (max-width: 40em) { @content ; }
+  }
+}
+
+@mixin errorClass($borderColor: $error-border-color, $bgColor: $error-bg-color) {
+  border: 1px solid $borderColor;
+  background-color: $bgColor;
+}
+
+@mixin ellipsis($width) {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: $width;
+}
+
+@mixin spacer($spacing:15px, $mode: v, $padBothSides: false) {
+  /* Params config (valid values):
+      $spacing: <spacing in pixels>
+      $mode: v = vertical (default) | h = horizontal
+      padBothSides: true | false (default)
+
+      defaults
+      --------
+      vert spacer - will pad top
+      horz spacer - will pad left
+  */
+
+  @if $mode == v {
+    margin-top: $spacing;
+    @if $padBothSides == true {
+      margin-bottom: $spacing;
+    }
+  }
+  @else if $mode == h {
+    margin-left: $spacing;
+    @if $padBothSides == true {
+      margin-right: $spacing;
+    }
+  }
+}
+

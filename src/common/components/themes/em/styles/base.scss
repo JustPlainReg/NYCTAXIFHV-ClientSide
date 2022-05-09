@@ -1,0 +1,23 @@
+@charset 'utf-8';
+
+@import '~react-redux-toastr/src/styles/index';
+
+@import 'foundation';
+@include foundation-global-styles;
+@include foundation-grid;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+@include foundation-badge;
+@include foundation-close-button;
+@include foundation-reveal;
+@include foundation-tooltip;
+@include foundation-float-classes;
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-visibility-classes;
+@include callout-base;
+
+@import './vars.scss';
+@import './mixins.scss';
+@import './components/consent.scss';

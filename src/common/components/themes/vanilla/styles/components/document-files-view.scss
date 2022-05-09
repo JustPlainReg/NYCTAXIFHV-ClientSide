@@ -1,0 +1,115 @@
+.em-cc-bp-documents {  
+  ul {
+    margin-left: 0;
+    li {
+      list-style-type: none;
+    }
+  }
+  
+  .uploaded-files-button {
+    width: 100%;
+  }
+
+  .list {
+    display: block;
+    background: $white;    
+    max-height: 512px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    
+    @include breakpoint(phone) {
+      height:     calc(80vh - 56px - 150px);
+      max-height: none;
+    }
+
+    @include breakpoint(phablet) {
+      width: calc(45vw - 50px);
+    }
+
+    .header {
+      color: $medium-gray;
+      font-size: 12px;
+      padding: 10px;
+      text-transform: uppercase;
+  
+      @include breakpoint(phone) {
+        display: none;
+      }
+
+      @include breakpoint(phablet) {
+        display: none;
+      }
+
+      @include breakpoint(tablet) {
+        display: block;
+      }  
+
+      @include breakpoint(laptop) {
+        display: block;
+      }      
+
+      .name {        
+        @include breakpoint(tablet) {
+          width: 60%;
+          float: left;  
+        }      
+      }
+
+      .date {
+        @include breakpoint(tablet) {
+          float: left;  
+        }
+      }
+    } 
+
+    .row {
+      border-top: 1px solid $light-gray;
+      color: $medium-gray;
+      font-size: 14px;
+      line-height: 18px;
+      padding: 10px;
+      display: block;
+
+      .name {
+        overflow: hidden;
+        padding-right: 40px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        @include breakpoint(phone) {
+          display: block;
+          margin-bottom: 5px;
+          width: 100%;
+        }
+
+        @include breakpoint(phablet) {
+          display: block;
+          margin-bottom: 5px;
+          width: 100%;
+        }
+  
+        @include breakpoint(tablet) {
+          display: inline-block;
+          margin-bottom: 0px;
+          width: 60%;          
+        }            
+      }
+    
+      .date {
+        color: #6d6d6d;
+    
+        @include breakpoint(phone) {
+          display: block;
+        }
+
+        @include breakpoint(phablet) {
+          display: block;
+        }
+  
+        @include breakpoint(tablet) {
+          display: inline-block;      
+        }           
+      }
+    }    
+  }
+}  

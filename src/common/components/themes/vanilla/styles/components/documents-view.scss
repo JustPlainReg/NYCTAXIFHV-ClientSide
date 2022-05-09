@@ -1,0 +1,33 @@
+.em-cc-bp-documents {
+  .em-cc--card {
+    height: inherit
+  }
+  .uploads-documentListContainer {
+    clear: both;
+  }
+
+  .action-container {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: thin solid #c7c9cb;
+
+    button {
+      @include breakpoint(phone) {
+        width:   100%;
+      }
+      @include breakpoint(phablet) {
+        width:   100%;
+        font-size: inherit;        
+      }
+      @include breakpoint(tablet) {
+        width: inherit;
+        font-size: 1.25rem;        
+      }      
+      @include breakpoint(laptop) {
+        width: inherit;
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+}

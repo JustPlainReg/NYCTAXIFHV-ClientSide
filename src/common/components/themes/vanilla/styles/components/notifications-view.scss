@@ -1,0 +1,284 @@
+.em-cc-bp-notifications {
+  ul {
+    margin-left: 0;
+    li {
+      list-style-type: none;
+    }
+  }
+
+  .title {
+    color: $dark-gray;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 80px;
+    position: relative;
+    text-transform: uppercase;
+    
+    @include breakpoint(phone) {
+      display: inline-block;
+      float: none;
+    }
+  }
+
+  .back-anchor {
+    @include breakpoint(phone) {
+      bottom: 0;
+      display: block;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      //z-index: $z-index-medium;
+    }
+  }
+
+  .back-arrow {
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    padding-right: 3px;
+    width: 20px;
+    height: 16px;
+    background: url("../images/keyboard_back.svg") no-repeat;
+    color: #0e6ba9
+  }  
+    
+
+  .no-notifications {
+    padding-top: 128px;
+
+    .text {
+      font-size:   24px;
+      color:       #6d6d6d;;
+      text-align:  center;
+      font-weight: bold;
+    }      
+  }
+
+  .notifications {
+
+    .list {
+      width: 40%;
+      min-height: calc(100vh - 193px);
+      background-color: #f8f8f8;
+      border-right: solid 1px $light-gray;
+
+      @include breakpoint(phone) {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .list-item {
+        position:   relative;
+        cursor:     pointer;
+        overflow-x: hidden;
+        padding: 23px 10px 23px 30px;
+        background: #f4f6f8;
+        border-bottom: solid 1px $light-gray;
+    
+        @include breakpoint(phone) {
+          padding: 24px 40px;
+        }
+      }
+  
+      .list-item::before {
+        display:       block;
+        content:       '';
+        position:      absolute;
+        width:         10px;
+        height:        10px;
+        border-radius: 50%;
+        top:           50%;
+        margin-top:    -5px;
+        background:    map-get($emccla-palette, primary);
+        left:          10px;
+    
+        @include breakpoint(phone) {
+          left: 16px;
+        }
+      }    
+  
+      .list-item:first-child {
+        @include breakpoint(phone) {
+          border-top: solid 1px $light-gray;
+        }
+      }
+    
+      .list-item.is-read::before {
+        display: none;
+      }
+    
+      .list-item:hover,
+      .list-item.is-selected {
+        background: map-get($emccla-palette, primary);
+        color:      $white;
+        .sender,
+        .subject,
+        .date,
+        .time {
+          color: $white;
+        }
+      }
+  
+      .mobile-anchor {
+        display: none;
+    
+        @include breakpoint(phone) {
+          display: block;
+          position: absolute;
+          top: 0; bottom: 0;
+          right: 0; left: 0;
+        }
+      }
+    
+      .icon-container {
+        display: none;
+    
+        @include breakpoint(phone) {
+          display: block;
+          position: absolute;
+          right: 16px;
+          top: 32px;
+          //z-index: $z-index-medium;        
+        }
+        .icon {
+          display: inline-block;
+          height: 12px;
+          width: 12px;
+          background: url("../images/right_arrow_grey.svg") no-repeat;
+        }
+      }
+    
+      .timestamp {
+        float: right;
+        font-size: 12px;
+        width: 80px;
+        
+        @include breakpoint(phone) {
+          width: 80px;
+        }
+      }
+    
+      .time,
+      .date {
+        display: block;
+        color: #7d7a7a;
+        text-transform: uppercase;
+    
+        @include breakpoint(phone) {
+          float: none;
+        }
+      }
+    
+      .time {
+        @include breakpoint(phone) {
+          float: none;
+          margin-left: 0;
+        }
+      }
+    
+      .details {
+        width: calc(100% - 100px);
+    
+        @include breakpoint(phone) {
+          padding-right: 8px;
+          width: calc(100% - 100px);
+        }
+      }
+  
+      .subject {
+        font-size: 18px;
+        font-weight: bold;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    
+      .subject.is-read {
+        font-weight: normal;
+      }
+    }
+      
+    .list-detail {
+      .content--half {
+        width: 60%;
+        min-height: calc(100vh - 193px);
+    
+        @include breakpoint(phone) {
+          display: none;
+        }
+      }
+    
+      .content--full {
+        width: 100%;
+        @include breakpoint(phablet) {
+          display: none;
+        }
+        @include breakpoint(phone) {
+          display: block;
+        }
+      }
+    
+      .not-selected {
+        padding: 200px 0;
+        text-align:  center;
+  
+        .text {
+          font-size:   24px;
+          color:       $medium-gray;
+          font-weight: 700;
+        }      
+      }
+
+      // detail content
+      .header {
+        padding:       32px 0 32px 32px;
+        margin-bottom: 24px;
+        border-bottom: solid 1px $light-gray;
+    
+        @include breakpoint(phone) {
+          border-top: solid 1px $light-gray;
+        }
+      }
+    
+      .subject {
+        margin-bottom: 8px;
+        font-size:    24px;
+      }
+    
+      .timestamp {
+        padding-left:   32px;
+        margin-bottom:  28px;
+        font-size:      14px;
+        color:          $medium-gray;
+        text-transform: uppercase;
+      }
+    
+      .date {
+        font-weight: bold;
+        margin-right: 0.3rem;
+      }
+    
+      .body {
+        margin-bottom: 24px;
+        padding:       0 32px 32px 32px;
+        font-size:     20px;
+        line-height:   27px;
+        color:         $dark-gray;
+
+        @include breakpoint(phone) {
+          text-align: left;
+        }
+
+        @include breakpoint(phablet) {
+          text-align: left;
+        }
+
+        @include breakpoint(laptop) {
+          text-align: justify;
+        }
+      }
+    }
+  }
+}

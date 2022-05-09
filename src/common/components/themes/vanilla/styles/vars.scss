@@ -1,0 +1,116 @@
+// 1. Global
+// ---------
+
+$global-font-size: 100%;
+$global-font-color: #4a4a4a;
+
+$global-width: rem-calc(1200);
+$global-lineheight: 1.5;
+$emccla-palette: (
+  primary: #1779ba,
+  secondary: #767676,
+  success: #3adb76,
+  warning: #ffae00,
+  alert: #cc4b37,
+  accent: #FFE658,
+);
+$light-gray: #e6e6e6;
+$medium-gray: #a9b1be;
+$dark-gray: #8a8a8a;
+$black: #0a0a0a;
+$white: #fefefe;
+$faded-blue: #4A96AD;
+$plum: #7D1935;
+$body-background: #f9fafa;
+$body-font-color: $black;
+$body-font-family: 'ProximaNova-Regular', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$body-antialiased: true;
+$global-margin: 1rem;
+$global-padding: 1rem;
+$global-weight-normal: normal;
+$global-weight-bold: bold;
+$global-radius: 4px;
+$global-text-direction: ltr;
+$global-flexbox: false;
+$print-transparent-backgrounds: true;
+$primary-white: #fff;
+$primary-black: #000;
+$active-green: #0F9B41;
+
+$primary-color: map-get($emccla-palette, primary);
+$accent-color: map-get($emccla-palette, accent);
+$disabled-border-color: #cbcfd7;
+$disabled-text-color: #aeb6c2;
+$selected-green: #32b87c;
+$logo-file-name: 'base-logo.png';
+$content-box-bgcolor: $primary-white;
+
+$error: (
+  border-color: rgba(224,32,47,1),
+  bg-color: rgba(224, 31, 47, 0.1),
+  font-color: rgba(224,32,47,1)
+);
+
+// 2. Buttons
+// ----------
+$button: (
+  font-family: $body-font-family,
+  border-radius: 4px,
+  primary: (
+    text-color: $primary-white,
+    default-bg-color: $primary-color,
+    hover-bg-color: #006aa9,
+    selected: (
+      bgcolor: #005689
+    )
+  ),
+  secondary: (
+    text-color: $primary-color,
+    default-border-color: $medium-gray,
+    hover-border-color: $primary-color,
+    selected: (
+      text-color: #006aa9,
+      bgcolor: $primary-white
+    )
+  ),
+  two-option: (
+    width: 100px,
+    font-size: 1.1rem,
+    font-weight: 500,
+    selected: (
+      text-color: $selected-green,
+      border-color: $selected-green, 
+      bgcolor: rgba(108, 196, 171, 0.07),
+      border-radius: 5px
+    )
+  )
+);
+
+$inputSelectMap: (
+  border-color: $primary-color,
+  border-radius: 5px,
+  bgcolor: #f6fcfe,
+  focus-bgcolor: $white
+);
+
+// 3. Text box
+// -----------
+$textbox: $inputSelectMap;
+
+// 4. Select box
+// -------------
+$selectbox: $inputSelectMap;
+
+// 5. Label
+// --------
+$label-color: #333;
+$label-weight: 500;
+$label-size: 14px;
+
+
+// 6. Sub Total
+// --------
+$subtotal: (
+  border-color: #6cc4ab,
+  bgcolor: #f5fbf9,
+)

@@ -1,0 +1,62 @@
+.em-cc-bp-loan-header {
+  background: white;
+  margin-bottom:20px;
+  
+  .back-container {
+    display: inline;
+    padding: 20px 10px;
+  }
+  div {
+    text-align: left;
+    color: $black;
+  }
+
+  label {
+    color: #6d6d6d
+  }
+  
+  .header-item-group-container {
+    padding: 0 10px 0 0;
+  }
+
+  .header-item-group {
+    padding: 10px 0 10px 0;  
+    @include breakpoint(phablet) {    
+      border-left-style: outset;
+      border-left-width: 0.1rem;
+      color: $medium-gray;
+    }
+  }
+
+  .header-item {
+    padding: 0 20px 0 20px;    
+  }
+
+  .header-item-divider {
+    @include breakpoint(phablet) {
+      margin: 0 10px 0 10px;      
+      border-left-style: dotted;
+      border-left-width: 0.1rem;
+      color: $medium-gray;
+    }
+  }
+
+  span {
+    color: $dark-gray;
+  }
+
+  .phone {
+    display: inline-block;
+    margin-left: 5px;
+    width: 15px;
+    height: 15px;
+    background: url("../images/phone.svg") no-repeat;
+  }
+  .email {
+    display: inline-block;
+    margin-left: 5px;
+    width: 15px;
+    height: 11px;
+    background: url("../images/email.svg") no-repeat;
+  }
+}

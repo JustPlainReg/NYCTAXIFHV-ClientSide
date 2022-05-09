@@ -1,0 +1,14 @@
+
+.pagination{
+  margin-bottom: none;
+  &.page-number {
+    display: none;
+    @media only screen and (max-width: 40em) { 
+      display: block;
+    }
+    span {
+      font-size: 0.9rem;
+      color: $dark-gray;
+    }
+  }
+}

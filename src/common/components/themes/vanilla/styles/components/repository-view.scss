@@ -1,0 +1,230 @@
+.em-cc-bp-repository {
+  ul {
+    margin-left: 0;
+    li {
+      list-style-type: none;
+    }
+  }
+
+  .upload-button-container {
+    @include breakpoint(tablet) {
+      float: right;
+    }
+  }
+  .repo-upload {
+    padding: 32px 78px;
+
+    &-label {
+      cursor: pointer;
+      font-weight: normal;
+      font-size: 16px;
+      text-align: center;
+      width: 250px;
+      line-height: 50%;
+      height: 50px;
+
+      @include breakpoint(phone) {
+        width: 100%;
+      }
+      @include breakpoint(phablet) {
+        width: 100%;
+      }
+      @include breakpoint(tablet) {
+        width: 250px;
+      }
+    }
+  }
+
+  .repository-table {
+
+    .table-header {
+      font-size:      14px;
+      color:          $medium-gray;
+      font-weight:    bold;
+      text-transform: uppercase;
+      border-top:     solid 1px $light-gray;
+      border-bottom:  solid 1px $light-gray;
+      background:     #F4F6F8;
+      padding-top: 20px;
+      padding-bottom: 5px;
+
+      @include breakpoint(phone) {
+        display: none;
+      }
+
+      @include breakpoint(phablet) {
+        display: none;
+      }
+
+      @include breakpoint(tablet) {
+        display: block;
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+      @include breakpoint(laptop) {
+        display: block;
+        padding-left: 32px;
+        padding-right: 32px;
+      }      
+    }
+
+    .table-body--empty {
+      padding-top: 128px;
+    }
+
+    .table-empty-text {
+      font-size:   24px;
+      color:       #6d6d6d;
+      text-align:  center;
+      font-weight: bold;
+    }
+
+    .table-row {
+      color:        $medium-gray;
+      border-bottom: solid 1px $light-gray;
+      background:    #F4F6F8;
+      position: relative;
+      padding-top: 10px;
+      padding-bottom: 0px;      
+
+      @include breakpoint(phone) {
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-bottom: 10px; 
+      }
+
+      @include breakpoint(phablet) {
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-bottom: 10px;         
+      }        
+
+      @include breakpoint(tablet) {
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-bottom: 0px; 
+      }                      
+      @include breakpoint(laptop) {
+        padding-left: 32px;
+        padding-right: 32px;
+        padding-bottom: 0px; 
+      }                      
+
+    }
+
+    .table-column {
+      display: inline-block;
+      line-height: 20px; 
+      margin-top: 5px;
+    }
+
+    .table-column:nth-child(1) {
+      width: 15px; 
+    }
+
+    .table-column:nth-child(1):after { 
+      content: "\00a0 "; 
+    }
+
+    .table-column:nth-child(2) {
+      @include breakpoint(phone) {
+        width:        80%;
+        float:        none;
+      }
+
+      @include breakpoint(phablet) {
+        width:        80%;
+        float:        none;
+      }
+
+      @include breakpoint(tablet) {
+        width: 25%;
+      }
+      
+      @include breakpoint(laptop) {
+        position:       relative;
+        width:          40%;
+        font-weight:    bold;  
+      } 
+    }
+
+    .table-column:nth-child(3) {
+
+      @include breakpoint(phone) {
+        width: 80%;
+        font-size: 12px;
+        float: none;
+      }
+
+      @include breakpoint(phablet) {
+        width: 80%;
+        font-size: 12px;
+        float: none;
+      }
+
+      @include breakpoint(tablet) {
+        font-size: inherit;
+        float: left;
+        width: 30%;
+      }      
+    }
+
+    .table-column:nth-child(4) {
+
+      @include breakpoint(phone) {
+        position:   absolute;
+        right:      0;
+        top:        50%;
+        transform:  translateY(-50%);
+      }
+
+      @include breakpoint(tablet) {
+        width: 25%;
+      }
+         
+    }
+
+    .table-icon{
+      display: inline-block;
+      height: 15px;
+      width: 15px;
+    }
+
+    .table-icon-clip {
+      background: url("../images/clip.svg") no-repeat;
+
+      @include breakpoint(phone) {
+        background: url("../images/clip_grey.svg") no-repeat;
+        height: 22px;
+      }
+
+      @include breakpoint(phablet) {
+        background: url("../images/clip_grey.svg") no-repeat;
+        height: 22px;
+      }
+
+      @include breakpoint(tablet) {
+        height: 17px;
+      }
+    }
+
+    .table-open-file {
+      display:        inline-block;
+      color:          #0e6ba9;
+      cursor:         pointer;
+      @include ellipsis(90%);
+    }
+
+    .table-open-file:hover,
+    .table-open-file:focus {
+      color:           map-get($emccla-palette, primary);
+      text-decoration: none;
+      outline:         none;
+    }
+
+    .table-open-file-text {
+      color: inherit;
+      display: inline-block;
+    }
+  }
+}

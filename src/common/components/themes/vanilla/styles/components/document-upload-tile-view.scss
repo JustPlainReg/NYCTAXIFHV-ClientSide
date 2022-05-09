@@ -1,0 +1,48 @@
+.em-cc-bp-documents {
+  .card {
+    margin-bottom: 20px;
+
+    @include breakpoint(phone){
+      width: 100%;
+      margin-right: 0px;
+    }
+
+    @include breakpoint(phablet){
+      width: 100%;
+      margin-right: 0px;
+    }
+
+    @include breakpoint(tablet){
+      margin-right: 20px;      
+      width: 20rem;
+    }
+
+    .title {
+      width: 100% !important;
+      text-align: center;
+      @include ellipsis(90%);
+    }
+  }
+  
+  .upload-file-select-label {
+    cursor: pointer;
+    font-weight: normal;
+    font-size: 16px;
+    text-align: center;
+
+    @include breakpoint(phone) {
+      width: 100%;
+      height: 45px;
+    }
+
+    @include breakpoint(phablet){
+      width: 100%;
+      height: 45px;
+    }    
+
+    @include breakpoint(tablet){
+      width: 250px;
+    }    
+  }
+}
+

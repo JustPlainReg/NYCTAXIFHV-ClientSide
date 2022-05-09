@@ -1,0 +1,37 @@
+.em-cc--header {
+  background-color: #fff;
+  padding: 10px 30px;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.3), 0 2px 4px 0 rgba(0, 0, 0, 0.33);
+  
+  .em-cc--logo {
+    height: 50px;
+    margin: 5px;
+  }
+
+  .em-cc--navigation {
+    list-style: none;
+    float: right;
+    li {
+      display: inline-block;
+      margin-left: 12px;
+    }
+  }
+
+  @media (max-width: 736px) {
+    padding: 10px 10px;
+    img {
+      max-width: 50%;
+    }
+    .em-cc--navigation {
+      margin: 12px 0 0 0;
+      li a {
+        font-size: 10px;
+        font-weight: 600;
+        i {
+          display: block;
+          margin: auto;
+        }
+      }
+    }
+  }
+}

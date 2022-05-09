@@ -1,0 +1,162 @@
+.em-cc-la-nav-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    cursor: default;
+    color: #fafafa;
+    background: #236e9f;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -moz-transition: width ease-in-out .25s,background linear .1s;
+    -webkit-transition: width ease-in-out .25s,background linear .1s;
+    -o-transition: width ease-in-out .25s,background linear .1s;
+    transition: width ease-in-out .25s,background linear .1s;
+    -ms-transform: translate(0,0);
+    -moz-transform: translate(0,0);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate(0,0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    background-image: url('../images/ic-moon.svg'),
+                      url('../images/ic-map.svg'),
+                      linear-gradient(to bottom, $primary-color, $tertiary-color);
+    background-repeat: no-repeat;
+    background-position: 0 0,0 106%;
+    background-size: 100px, 280px, 100%;
+
+    .em-logo {
+      content: url('../images/em-logo.svg');
+      position: absolute;
+      width: 55px;
+      bottom: 21px;
+      left: 11px;
+
+      @include breakpoint(laptop) {
+        width: initial;
+        bottom: 36px;
+        left: 26px;
+      }
+      @include breakpoint(desktop) {
+        width: initial;
+        bottom: 36px;
+        left: 26px;
+      }
+    }
+  
+    .menu {
+        margin-top: 96px;
+        text-transform: uppercase;
+    
+        li {
+          position: relative;
+          opacity: 0.4;
+        }
+        a {
+          padding: 1.3rem 0;
+          margin-left: 26px;
+        }
+    
+        a span{
+          color: $primary-white;
+          font-size: 0.9rem;
+          margin-left: 50px;
+        }
+        
+        [class^=ic-]{
+          display: block;
+          position: absolute;
+          top:50%;
+          transform: translateY(-50%);
+          width: 24px;
+        }
+        .ic-add-details {
+          content: url('../images/ic-additional-details.svg');
+        }
+        .ic-borrower {
+          content: url('../images/ic-borrower.svg');
+        }
+        .ic-check {
+          content: url('../images/ic-check.svg');
+        }
+        .ic-co-borrower {
+          content: url('../images/ic-co-borrower.svg');
+        }
+        .ic-score {
+          content: url('../images/ic-credit-score.svg');
+        }
+        .ic-details {
+          content: url('../images/ic-details.svg');
+        }
+        .ic-assets {
+          content: url('../images/ic-dollar.svg');
+        }
+        .ic-rate {
+          content: url('../images/ic-rate.svg');
+        }
+        .ic-summary {
+          content: url('../images/ic-summary.svg');
+        }
+    
+        .item-visited {
+          opacity: 0.7;
+        }
+    
+        .item-active {
+          border-left: 6px solid $accent-color;
+          opacity: 0.8;
+    
+          a {
+            margin-left:20px;
+            
+            i {
+              width: 36px;
+              margin-left: -6px;
+            }
+    
+            span{
+              font-size: 1.1rem;
+              font-weight: 600;
+            }
+    
+            .ic-add-details {
+              content: url('../images/ic-additional-details-active.svg');
+            }
+            .ic-borrower {
+              content: url('../images/ic-borrower-active.svg');
+            }
+            .ic-check {
+              content: url('../images/ic-check-active.svg');
+            }
+            .ic-co-borrower {
+              content: url('../images/ic-co-borrower-active.svg');
+            }
+            .ic-score {
+              content: url('../images/ic-credit-score-active.svg');
+            }
+            .ic-details {
+              content: url('../images/ic-details-active.svg');
+            }
+            .ic-assets {
+              content: url('../images/ic-dollar-active.svg');
+            }
+            .ic-rate {
+              content: url('../images/ic-rate-active.svg');
+            }
+            .ic-summary {
+              content: url('../images/ic-summary-active.svg');
+            }
+    
+          }
+    
+        }
+        
+      }
+      
+}
