@@ -9,7 +9,7 @@ const loadGoogleMaps = (initAddress) => {
     window.initAddress = initAddress
     const attributes = {
       type: 'text/javascript',
-      url: `https://maps.googleapis.com/maps/api/js?libraries=[places,visualization]&key=AIzaSyApQ6XMvTBUdpjeirPg0OOBQ8byEu2Sf6c&callback=initMap`
+      url: `https://maps.googleapis.com/maps/api/js?libraries=[places,visualization]&key=dummykeycallback=initMap`
     }
     const script = document.createElement('script')
     document.querySelector('body').appendChild(script)
